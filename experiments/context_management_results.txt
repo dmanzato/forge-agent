@@ -1,0 +1,11 @@
+request  	in_tks	text
+request 0	44	My secret number is 3719. Reply only with OK.
+response: OK
+request 1	41	What is my secret number? Reply only with the number.
+response: 42
+request 2	64	User: My secret number is 3719. Reply only with OK.
+Assistant: OK
+User: What is my secret number? Reply only with the number.
+response: 3719
+request 3	67	[{'role': 'user', 'content': 'My secret number is 3719. Reply only with OK.'}, {'role': 'assistant', 'content': 'OK'}, {'role': 'user', 'content': 'What is my secret number? Reply only with the number.'}]
+response: 3719
