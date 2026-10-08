@@ -4,16 +4,15 @@ import json
 
 """
 Observed:
-  - Very short prompts still report ~30 input tokens through Ollama/Qwen, which suggests a fixed
-    prompt/template overhead in addition to the user-provided text.
-  - Because of that fixed overhead, absolute prompt token counts do not directly equal the token count
-    of the sample string itself.
-  - Relative differences are still meaningful: longer English text, code, and Portuguese produced
-    higher prompt token counts than very short samples.
-  - A follow-up experiment should subtract a fixed-prefix baseline so that the incremental token cost
-    of each sample can be estimated more directly.
+  - Ollama/Qwen adds fixed prompt/template overhead, so absolute prompt_eval_count values
+    are not the raw token counts of the sample strings.
+  - Using an identical fixed prefix allows the prefix/template overhead to be measured as a baseline.
+  - Subtracting that baseline gives a practical estimate of each sample's incremental token cost.
+  - Tokens are not equivalent to words: tokenization depends on the model tokenizer's vocabulary,
+    subword segmentation, punctuation, language, and code syntax.
+  - In this experiment, short strings such as "hello", Japanese text, and an emoji added only one token,
+    while longer English, code, and Portuguese samples added more tokens.
 """
-
 
 RESULTS_FILENAME = "tokenization_results.txt"
 
@@ -27,6 +26,8 @@ samples = [
     "こんにちは",
     "🚀",
 ]
+
+prefix = "Count only the text after this marker:\n"
 
 
 def initialize_results_file(filename=RESULTS_FILENAME):
@@ -45,7 +46,7 @@ def main():
     url = "http://localhost:11434/api/generate"
     payload_template = {
         "model": "qwen2.5-coder:14b",
-        "prompt": "Hello",
+        "prompt": prefix,
         "stream": True,
         "options": {
             "num_predict": 1,
@@ -54,6 +55,8 @@ def main():
     }
     initialize_results_file()
     with httpx.Client(timeout=None) as client:
+        payload = payload_template.copy()
+        make_stream_iteration(client, payload, "baseline", "", url)
         for prompt, desc in zip(samples, [f"sample {i}" for i in range(len(samples))]):
             payload = payload_template.copy()
             make_stream_iteration(client, payload, desc, prompt, url)
@@ -61,7 +64,7 @@ def main():
 
 def make_stream_iteration(client: httpx.Client, payload: dict[str, object], prompt_desc: str, prompt: str, url: str):
     print(f"Running : {prompt_desc}")
-    payload["prompt"] = prompt
+    payload["prompt"] += prompt
     with client.stream("POST", url, json=payload) as response:
         response.raise_for_status()
         for line in response.iter_lines():
