@@ -1,0 +1,9 @@
+sample  	in_tks	text
+sample 0	30	hello
+sample 1	31	hello world
+sample 2	31	internationalization
+sample 3	39	The quick brown fox jumps over the lazy dog.
+sample 4	34	def calculate_total(items):
+sample 5	35	Olá, tudo bem?
+sample 6	30	こんにちは
+sample 7	30	🚀
