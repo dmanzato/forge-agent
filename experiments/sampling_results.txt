@@ -1,0 +1,46 @@
+temp	top_p	seed	run	response
+0.0	None	None	1	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.0	None	None	2	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.0	None	None	3	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.0	None	None	4	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.0	None	None	5	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.2	None	None	1	Debugging distributed systems is like finding a needle in a haystack, where the haystack is constantly moving and the needle is hidden in a complex network of interconnected straws.
+0.2	None	None	2	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and every witness is a server, all trying to piece together the mystery of why the system isn't functioning as expected.
+0.2	None	None	3	Debugging a distributed system is like herding a flock of sheep across a vast, foggy landscape, where each sheep (component) may be wandering off in its own direction, and you must track them down, one by one, to ensure they all reach the right destination.
+0.2	None	None	4	Debugging distributed systems is like herding a flock of sheep across a vast, foggy landscape, where each sheep (node) must be accounted for and guided to its proper place, all while navigating the unpredictable terrain of network latency and communication failures.
+0.2	None	None	5	Debugging a distributed system is like finding a needle in a haystack, where the haystack keeps moving and changing.
+0.8	None	None	1	Debugging a distributed system is like searching for a needle in a haystack, where the haystack is constantly moving and the needle keeps changing its location.
+0.8	None	None	2	Debugging distributed systems is like herding a flock of sheep across a vast, foggy landscape, where each sheep (node) must be accounted for and guided in perfect harmony to reach the destination without getting lost or injured.
+0.8	None	None	3	Debugging a distributed system is like herding cats; you have to chase down elusive issues across multiple machines, hoping they don't scatter before you can catch them.
+0.8	None	None	4	Debugging a distributed system is like being a detective in a vast, interconnected crime scene where each node is a potential witness, and the culprit is a subtle flaw in communication or synchronization.
+0.8	None	None	5	Debugging distributed systems is like finding a needle in a haystack, where the haystack is constantly moving and changing.
+1.2	None	None	1	Debugging distributed systems is like herding a flock of sheep across a vast, foggy landscape, where each sheep represents a node, and the challenge lies in ensuring they all move in unison towards the correct destination.
+1.2	None	None	2	Debugging a distributed system is like finding a needle in a haystack across multiple fields.
+1.2	None	None	3	Debugging distributed systems is like navigating a vast ocean in a small boat, where each choppy wave and hidden reef represents a potential issue that must be meticulously identified and circumnavigated to reach the safe harbor of a stable, functioning system.
+1.2	None	None	4	Debugging a distributed system is like searching for a missing puzzle piece in a vast, ever-expanding jigsaw puzzle where pieces are constantly moving and changing.
+1.2	None	None	5	Debugging distributed systems is like being a detective in a vast, interconnected network of clues, where each node holds a piece of the puzzle that must be carefully examined and pieced together to reveal the source of the issue.
+0.8	0.9	None	1	Debugging a distributed system is like finding a needle in a haystack, where each piece of hay is a separate server, and the needle is the elusive bug causing the system to malfunction.
+0.8	0.9	None	2	Debugging distributed systems is like finding a needle in a haystack, but where the haystack is constantly moving, and the needle keeps jumping to a different location.
+0.8	0.9	None	3	Debugging a distributed system is like herding a flock of sheep across a vast and unpredictable landscape, where each sheep (node) has its own mind and may take a different path.
+0.8	0.9	None	4	Debugging distributed systems is like herding cats across a vast, ever-changing landscape, where each cat (component) has its own agenda and the terrain (network) is fraught with unpredictable obstacles.
+0.8	0.9	None	5	Debugging a distributed system is like untangling a ball of yarn, where each thread represents a component, and finding the right pull requires patience and precision.
+0.8	0.3	None	1	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.8	0.3	None	2	Debugging a distributed system is like finding a needle in a haystack, where the haystack keeps moving and changing.
+0.8	0.3	None	3	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.8	0.3	None	4	Debugging a distributed system is like finding a needle in a haystack, where the haystack keeps moving and changing.
+0.8	0.3	None	5	Debugging a distributed system is like being a detective in a vast, interconnected city, where every clue is a log file, and the culprit is a subtle communication breakdown between nodes.
+0.8	None	42	1	Debugging distributed systems is like being a detective in a sprawling mystery novel, where clues are scattered across multiple locations and the culprit is elusive, requiring patience, persistence, and a keen eye for detail.
+0.8	None	42	2	Debugging distributed systems is like being a detective in a sprawling mystery novel, where clues are scattered across multiple locations and the culprit is elusive, requiring patience, persistence, and a keen eye for detail.
+0.8	None	42	3	Debugging distributed systems is like being a detective in a sprawling mystery novel, where clues are scattered across multiple locations and the culprit is elusive, requiring patience, persistence, and a keen eye for detail.
+0.8	None	42	4	Debugging distributed systems is like being a detective in a sprawling mystery novel, where clues are scattered across multiple locations and the culprit is elusive, requiring patience, persistence, and a keen eye for detail.
+0.8	None	42	5	Debugging distributed systems is like being a detective in a sprawling mystery novel, where clues are scattered across multiple locations and the culprit is elusive, requiring patience, persistence, and a keen eye for detail.
+0.8	None	123	1	Debugging distributed systems is like being a detective in a vast, interconnected network of clues, where each node holds a piece of the puzzle that, when pieced together, reveals the source of the problem.
+0.8	None	123	2	Debugging distributed systems is like being a detective in a vast, interconnected network of clues, where each node holds a piece of the puzzle that, when pieced together, reveals the source of the problem.
+0.8	None	123	3	Debugging distributed systems is like being a detective in a vast, interconnected network of clues, where each node holds a piece of the puzzle that, when pieced together, reveals the source of the problem.
+0.8	None	123	4	Debugging distributed systems is like being a detective in a vast, interconnected network of clues, where each node holds a piece of the puzzle that, when pieced together, reveals the source of the problem.
+0.8	None	123	5	Debugging distributed systems is like being a detective in a vast, interconnected network of clues, where each node holds a piece of the puzzle that, when pieced together, reveals the source of the problem.
+0.8	None	713	1	Debugging a distributed system is like finding a needle in a haystack, where the haystack is constantly moving and made of many different materials.
+0.8	None	713	2	Debugging a distributed system is like finding a needle in a haystack, where the haystack is constantly moving and made of many different materials.
+0.8	None	713	3	Debugging a distributed system is like finding a needle in a haystack, where the haystack is constantly moving and made of many different materials.
+0.8	None	713	4	Debugging a distributed system is like finding a needle in a haystack, where the haystack is constantly moving and made of many different materials.
+0.8	None	713	5	Debugging a distributed system is like finding a needle in a haystack, where the haystack is constantly moving and made of many different materials.
