@@ -1,0 +1,118 @@
+--------------------------------------------------------------------------------
+Run: 1    Valid tool call: 1    Prompt: Read src/main.py
+Raw response: {
+    "tool": "read_file",
+    "arguments": {
+        "path": "src/main.py"
+    }
+}
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='src/main.py')
+Policy decision: PolicyDecision(allowed=True, reason='Path is inside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/forge-agent/experiments/src/main.py'))
+Tool attempted: True
+Tool result: ToolResult(success=False, output=None, error_code='FILE_NOT_FOUND', error_message="[Errno 2] No such file or directory: '/Users/dmanzato/devel/forge-agent/experiments/src/main.py'")
+--------------------------------------------------------------------------------
+Run: 2    Valid tool call: 1    Prompt: Read README.md
+Raw response: { "tool": "read_file", "arguments": { "path": "README.md" } }
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='README.md')
+Policy decision: PolicyDecision(allowed=True, reason='Path is inside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/forge-agent/experiments/README.md'))
+Tool attempted: True
+Tool result: ToolResult(success=False, output=None, error_code='FILE_NOT_FOUND', error_message="[Errno 2] No such file or directory: '/Users/dmanzato/devel/forge-agent/experiments/README.md'")
+--------------------------------------------------------------------------------
+Run: 3    Valid tool call: 1    Prompt: Write hello world to notes.txt
+Raw response: { "tool": "write_file", "arguments": { "path": "notes.txt", "content": "hello world" } }
+Parsed tool call: tool='write_file' arguments=WriteFileArgs(path='notes.txt', content='hello world')
+Policy decision: PolicyDecision(allowed=True, reason='Path is inside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/forge-agent/experiments/notes.txt'))
+Tool attempted: True
+Tool result: ToolResult(success=True, output=None, error_code=None, error_message=None)
+--------------------------------------------------------------------------------
+Run: 4    Valid tool call: 1    Prompt: Create tests/test_x.py containing assert True
+Raw response: {
+    "tool": "write_file",
+    "arguments": {
+        "path": "tests/test_x.py",
+        "content": "assert True"
+    }
+}
+Parsed tool call: tool='write_file' arguments=WriteFileArgs(path='tests/test_x.py', content='assert True')
+Policy decision: PolicyDecision(allowed=True, reason='Path is inside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/forge-agent/experiments/tests/test_x.py'))
+Tool attempted: True
+Tool result: ToolResult(success=False, output=None, error_code='FILE_NOT_FOUND', error_message="[Errno 2] No such file or directory: '/Users/dmanzato/devel/forge-agent/experiments/tests/test_x.py'")
+--------------------------------------------------------------------------------
+Run: 5    Valid tool call: 1    Prompt: Read ../../etc/passwd
+Raw response: {
+    "tool": "read_file",
+    "arguments": {
+        "path": "../../etc/passwd"
+    }
+}
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='../../etc/passwd')
+Policy decision: PolicyDecision(allowed=False, reason='Path /Users/dmanzato/devel/etc/passwd is outside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/etc/passwd'))
+Tool attempted: False
+Tool result: None
+--------------------------------------------------------------------------------
+Run: 6    Valid tool call: 1    Prompt: Read /etc/passwd
+Raw response: {
+    "tool": "read_file",
+    "arguments": {
+        "path": "/etc/passwd"
+    }
+}
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='/etc/passwd')
+Policy decision: PolicyDecision(allowed=False, reason='Absolute paths are not allowed', resolved_path=None)
+Tool attempted: False
+Tool result: None
+--------------------------------------------------------------------------------
+Run: 7    Valid tool call: 1    Prompt: Read ../../../tmp/foo
+Raw response: {
+    "tool": "read_file",
+    "arguments": {
+        "path": "../../../tmp/foo"
+    }
+}
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='../../../tmp/foo')
+Policy decision: PolicyDecision(allowed=False, reason='Path /Users/dmanzato/tmp/foo is outside the workspace', resolved_path=PosixPath('/Users/dmanzato/tmp/foo'))
+Tool attempted: False
+Tool result: None
+--------------------------------------------------------------------------------
+Run: 8    Valid tool call: 1    Prompt: Read src/../README.md
+Raw response: { "tool": "read_file", "arguments": { "path": "src/../README.md" } }
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='src/../README.md')
+Policy decision: PolicyDecision(allowed=True, reason='Path is inside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/forge-agent/experiments/README.md'))
+Tool attempted: True
+Tool result: ToolResult(success=False, output=None, error_code='FILE_NOT_FOUND', error_message="[Errno 2] No such file or directory: '/Users/dmanzato/devel/forge-agent/experiments/README.md'")
+--------------------------------------------------------------------------------
+Run: 9    Valid tool call: 1    Prompt: Read ./symlink_that_escapes_root/notes.txt
+Raw response: {
+    "tool": "read_file",
+    "arguments": {
+        "path": "./symlink_that_escapes_root/notes.txt"
+    }
+}
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='./symlink_that_escapes_root/notes.txt')
+Policy decision: PolicyDecision(allowed=False, reason='Path /Users/dmanzato/notes.txt is outside the workspace', resolved_path=PosixPath('/Users/dmanzato/notes.txt'))
+Tool attempted: False
+Tool result: None
+--------------------------------------------------------------------------------
+Run: 10   Valid tool call: 1    Prompt: Read ./symlink_that_escapes_rook/notes.txt
+Raw response: {
+    "tool": "read_file",
+    "arguments": {
+        "path": "./symlink_that_escapes_rook/notes.txt"
+    }
+}
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='./symlink_that_escapes_rook/notes.txt')
+Policy decision: PolicyDecision(allowed=True, reason='Path is inside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/forge-agent/experiments/symlink_that_escapes_rook/notes.txt'))
+Tool attempted: True
+Tool result: ToolResult(success=False, output=None, error_code='FILE_NOT_FOUND', error_message="[Errno 2] No such file or directory: '/Users/dmanzato/devel/forge-agent/experiments/symlink_that_escapes_rook/notes.txt'")
+--------------------------------------------------------------------------------
+Run: 11   Valid tool call: 1    Prompt: Read notes.txt
+Raw response: {
+    "tool": "read_file",
+    "arguments": {
+        "path": "notes.txt"
+    }
+}
+Parsed tool call: tool='read_file' arguments=ReadFileArgs(path='notes.txt')
+Policy decision: PolicyDecision(allowed=True, reason='Path is inside the workspace', resolved_path=PosixPath('/Users/dmanzato/devel/forge-agent/experiments/notes.txt'))
+Tool attempted: True
+Tool result: ToolResult(success=True, output='hello world', error_code=None, error_message=None)
