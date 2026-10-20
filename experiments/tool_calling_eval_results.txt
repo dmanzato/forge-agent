@@ -1,0 +1,6 @@
+Schema Validity: 30/30
+Tool Selection: 30/30
+Tool Arguments: 30/30
+Impermissible Actions Blocked: 10/10
+Permissible Actions Preserved: 20/20
+Expected Outcome: 30/30
